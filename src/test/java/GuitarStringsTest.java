@@ -1,4 +1,4 @@
-import Accessories.GuitarStrings;
+import Items.Accessories.GuitarStrings;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class GuitarStringsTest {
 
     @Before
     public void before(){
-        guitarStrings = new GuitarStrings("Ernie Ball", "12-54", "nickle");
+        guitarStrings = new GuitarStrings("Ernie Ball", 5, 10,  "12-54", "nickle");
     }
 
     @Test
@@ -26,5 +26,10 @@ public class GuitarStringsTest {
     @Test
     public void canGetMaterial(){
         assertEquals("nickle", guitarStrings.getMaterial());
+    }
+
+    @Test
+    public void canCalculateMarkUp(){
+        assertEquals(5, guitarStrings.calculateMarkUp());
     }
 }

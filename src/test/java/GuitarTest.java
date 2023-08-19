@@ -1,4 +1,4 @@
-import Instruments.Guitar;
+import Items.Instruments.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("Fender", "Telecaster", 6, "Split-coil");
+        guitar = new Guitar("Fender", "Telecaster", 300, 500,  6, "Split-coil");
     }
 
     @Test
@@ -21,6 +21,15 @@ public class GuitarTest {
     @Test
     public void canGetModel(){
         assertEquals("Telecaster", guitar.getModel());
+    }
+
+    @Test
+    public void canGetBuyingPrice(){
+        assertEquals(300, guitar.getBuyingPrice());
+    }
+    @Test
+    public void canGetSellingPrice(){
+        assertEquals(500, guitar.getSellingPrice());
     }
 
     @Test

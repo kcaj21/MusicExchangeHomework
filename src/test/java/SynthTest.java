@@ -1,4 +1,4 @@
-import Instruments.Synth;
+import Items.Instruments.Synth;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class SynthTest {
 
     @Before
     public void before(){
-        synth = new Synth("Roland", "Juno-6", "Analog");
+        synth = new Synth("Roland", "Juno-6", 1000, 3000,  "Analog");
     }
 
     @Test

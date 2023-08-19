@@ -1,4 +1,4 @@
-import Accessories.Plectrum;
+import Items.Accessories.Plectrum;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class PlectrumTest {
 
     @Before
     public void before(){
-        plectrum = new Plectrum("Jim Dunlop", 1.00);
+        plectrum = new Plectrum("Jim Dunlop", 1, 2, 1.00);
     }
 
     @Test

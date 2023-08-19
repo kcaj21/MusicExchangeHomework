@@ -1,4 +1,4 @@
-package Accessories;
+package Items.Accessories;
 
 import Behaviours.ISell;
 
@@ -7,8 +7,8 @@ public class GuitarStrings extends Accessory implements ISell {
     private String gauge;
     private String material;
 
-    public GuitarStrings(String brand, String gauge, String material) {
-        super(brand);
+    public GuitarStrings(String brand, int buyingPrice, int sellingPrice, String gauge, String material) {
+        super(brand, buyingPrice, sellingPrice);
         this.gauge = gauge;
         this.material = material;
     }

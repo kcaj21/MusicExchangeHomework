@@ -97,4 +97,11 @@ public class ShopTest {
         assertEquals(0, shop.stockCount());
     }
 
+    @Test
+    public void canGetPotentialProfit(){
+        shop.add(guitarStrings);
+        shop.add(plectrum);
+        assertEquals(25, shop.getPotentialProfit());
+    }
+
 }

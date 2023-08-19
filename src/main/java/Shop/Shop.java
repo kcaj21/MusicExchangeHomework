@@ -1,6 +1,7 @@
 package Shop;
 
 import Behaviours.ISell;
+import Items.Item;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -34,5 +35,13 @@ public class Shop {
 
     public int stockCount() {
         return stock.size();
+    }
+
+    public int getPotentialProfit(){
+        int potentialProfit = 0;
+        for (ISell item: stock){
+            potentialProfit = potentialProfit + item.calculateMarkUp();
+        }
+        return potentialProfit;
     }
 }
